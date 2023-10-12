@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+</head>
+<body>
+    {% if error %}
+        {{ error }}
+    {% endif %}
+    <form action="/dashboard/profile?update=username" method="post">
+        <label for="new_username">New username</label>
+        <input type="text" name="new_username">
+
+        <label for="curr_password">Current password</label>
+        <input type="password" name="curr_password">
+
+        <button type="submit">Update username</button>
+    </form>
+
+    <form action="/dashboard/profile?update=password" method="post">
+        <label for="new_password">New password</label>
+        <input type="password" name="new_password">
+
+        <label for="curr_password">Current password</label>
+        <input type="password" name="curr_password">
+
+        <button type="submit">Update password</button>
+    </form>
+</body>
+</html>
